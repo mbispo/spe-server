@@ -1,0 +1,28 @@
+<datasources>
+	<datasource jta="true" jndi-name="java:jboss/datasources/SeniorEmbDS" pool-name="SeniorEmbDS" enabled="true" use-ccm="true">
+		<connection-url>jdbc:jtds:sqlserver://SRV-DBSCAT/senior;appName=PontoEletronico</connection-url>
+        <driver-class>net.sourceforge.jtds.jdbc.Driver</driver-class>
+        <driver>sqljtds</driver>
+        <security>
+	        <user-name>DsaCatraca</user-name>
+	        <password>DsaCatracaTj</password>
+		</security>
+        <pool>
+            <min-pool-size>1</min-pool-size>
+            <max-pool-size>20</max-pool-size>
+            <flush-strategy>FailingConnectionOnly</flush-strategy>
+        </pool>
+        <validation>
+            <valid-connection-checker class-name="org.jboss.jca.adapters.jdbc.extensions.mssql.MSSQLValidConnectionChecker"/>
+            <check-valid-connection-sql>SELECT 1</check-valid-connection-sql>
+            <background-validation>true</background-validation>
+            <background-validation-millis>60000</background-validation-millis>
+        </validation>
+        <timeout>
+            <idle-timeout-minutes>1</idle-timeout-minutes>
+        </timeout>
+        <statement>
+            <share-prepared-statements>false</share-prepared-statements>
+        </statement>
+    </datasource>		
+</datasources>
