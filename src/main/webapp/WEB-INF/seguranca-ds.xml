@@ -4,8 +4,8 @@
         <driver-class>net.sourceforge.jtds.jdbc.Driver</driver-class>
         <driver>sqljtds</driver>
         <security>
-             <user-name>www2</user-name>
-             <password>ZKuLiGG33liSdsuRD0</password>
+            <user-name>${DB_SQLSRV_USER}</user-name>
+            <password>${DB_SQLSRV_PW}</password>
         </security>
         <pool>
             <min-pool-size>1</min-pool-size>
