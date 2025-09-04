@@ -1,11 +1,11 @@
 <datasources>
 	<datasource jta="true" jndi-name="java:jboss/datasources/SeniorEmbDS" pool-name="SeniorEmbDS" enabled="true" use-ccm="true">
-		<connection-url>jdbc:jtds:sqlserver://SRV-DBSCAT/senior;appName=PontoEletronico</connection-url>
+		<connection-url>jdbc:jtds:sqlserver://${DB_SQLSRV}/senior;appName=PontoEletronico</connection-url>
         <driver-class>net.sourceforge.jtds.jdbc.Driver</driver-class>
         <driver>sqljtds</driver>
         <security>
-	        <user-name>DsaCatraca</user-name>
-	        <password>DsaCatracaTj</password>
+            <user-name>${DB_SQLSRV_USER}</user-name>
+            <password>${DB_SQLSRV_PW}</password>
 		</security>
         <pool>
             <min-pool-size>1</min-pool-size>
